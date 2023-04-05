@@ -18,16 +18,16 @@ pub fn resolve_dependencies() {
     } else {
         // we are not in a crate, assuming we are in our git repo.
         // so just update all submodules.
-        assert!(
-            Command::new("git")
-                .args(&["submodule", "update", "--init", "--depth", "1"])
-                .stdout(Stdio::inherit())
-                .stderr(Stdio::inherit())
-                .status()
-                .unwrap()
-                .success(),
-            "`git submodule update` failed"
-        );
+//         assert!(
+//             Command::new("git")
+//                 .args(&["submodule", "update", "--init", "--depth", "1"])
+//                 .stdout(Stdio::inherit())
+//                 .stderr(Stdio::inherit())
+//                 .status()
+//                 .unwrap()
+//                 .success(),
+//             "`git submodule update` failed"
+//         );
     }
 }
 
